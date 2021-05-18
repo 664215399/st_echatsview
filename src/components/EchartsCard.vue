@@ -1,6 +1,8 @@
 <template>
   <div class="EchartsCard">
-    <slot name="title"></slot>
+    <div class="EchartsCard-title">
+      <slot name="title"></slot>
+    </div>
     <div class="EchartsCard-chart"></div>
     <!-- 占位 -->
     <div class="EchartsCard-bottom"></div>

@@ -2,13 +2,13 @@
   <div class="VisualBody">
     <div class="VisualBody-left">
       <echarts-card v-for="(item,index) in titleList" :key="index" v-show="index<3">
-        <div slot="title" class="EchartsCard-title">{{item.title}}</div>
+        <template slot="title">{{item.title}}</template>
       </echarts-card>
     </div>
     <div class="VisualBody-center"></div>
     <div class="VisualBody-right">
       <echarts-card v-for="(item,index) in titleList" :key="index" v-show="index>=3">
-        <div slot="title" class="EchartsCard-title">{{item.title}}</div>
+        <template slot="title" class="EchartsCard-title">{{item.title}}</template>
       </echarts-card>
     </div>
   </div>
