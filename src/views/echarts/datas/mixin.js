@@ -172,7 +172,7 @@ export const mixin = {
         ['长春', XNData],
         ['哈尔滨', YCData]
       ].forEach(function (item, i) {
-        console.log(item)
+        // console.log(item)
         series.push(
           {
             name: item[0] + ' Top3',
