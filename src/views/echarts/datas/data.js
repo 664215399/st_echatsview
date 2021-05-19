@@ -11,3 +11,10 @@ export const titleList = [{
 }, {
   title: '地区分布'
 }]
+export const marketStatistics = [{
+  title: '市场需求人数',
+  num: 125811
+}, {
+  title: '市场供应人数',
+  num: 104212
+}]

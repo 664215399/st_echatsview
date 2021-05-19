@@ -5,7 +5,9 @@
         <template slot="title">{{item.title}}</template>
       </echarts-card>
     </div>
-    <div class="VisualBody-center"></div>
+    <div class="VisualBody-center">
+      <visual-title :marketStatistics="marketStatistics"></visual-title>
+    </div>
     <div class="VisualBody-right">
       <echarts-card v-for="(item,index) in titleList" :key="index" v-show="index>=3">
         <template slot="title" class="EchartsCard-title">{{item.title}}</template>
@@ -16,29 +18,43 @@
 
 <script>
 import EchartsCard from '@/components/EchartsCard'
-import { titleList } from '../datas/data'
+import VisualTitle from './VisualTitle'
+import { titleList, marketStatistics } from '../datas/data'
+
 export default {
   components: {
-    EchartsCard
+    EchartsCard, VisualTitle
   },
   data () {
     return {
-
+      marketStatistics: []
     }
   },
   created () {
-
+    this.getData()
   },
   mounted () {
 
   },
   methods: {
-
+    getData () {
+      this.imitatePromise().then(res => {
+        this.marketStatistics = res
+      })
+    },
+    imitatePromise () {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(marketStatistics)
+        }, 500)
+      })
+    }
   },
   computed: {
     titleList () {
       return titleList
     }
+
   }
 }
 </script>

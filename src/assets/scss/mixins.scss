@@ -1,44 +1,57 @@
 @mixin top-turn {
-    &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        width: 10px;
-        height: 10px;
-        border-top: 2px solid #02a6b5;
-        border-left: 2px solid #02a6b5;
-      }
-      &::after {
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: "";
-        width: 10px;
-        height: 10px;
-        border-top: 2px solid #02a6b5;
-        border-right: 2px solid #02a6b5;
-      }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #02a6b5;
+    border-left: 2px solid #02a6b5;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #02a6b5;
+    border-right: 2px solid #02a6b5;
+  }
 }
+
 @mixin bottom-turn {
-    &::before {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: "";
-        width: 10px;
-        height: 10px;
-        border-bottom: 2px solid #02a6b5;
-        border-left: 2px solid #02a6b5;
-      }
-      &::after {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        content: "";
-        width: 10px;
-        height: 10px;
-        border-bottom: 2px solid #02a6b5;
-        border-right: 2px solid #02a6b5;
-      }
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #02a6b5;
+    border-left: 2px solid #02a6b5;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid #02a6b5;
+    border-right: 2px solid #02a6b5;
+  }
+}
+
+@mixin VisualTitle-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    text-align: center;
+    flex: 1;
+  }
 }
