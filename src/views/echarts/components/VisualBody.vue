@@ -7,6 +7,7 @@
     </div>
     <div class="VisualBody-center">
       <visual-title :marketStatistics="marketStatistics"></visual-title>
+      <visual-map></visual-map>
     </div>
     <div class="VisualBody-right">
       <echarts-card v-for="(item,index) in titleList" :key="index" v-show="index>=3">
@@ -19,11 +20,12 @@
 <script>
 import EchartsCard from '@/components/EchartsCard'
 import VisualTitle from './VisualTitle'
+import VisualMap from './VisualMap'
 import { titleList, marketStatistics } from '../datas/data'
 
 export default {
   components: {
-    EchartsCard, VisualTitle
+    EchartsCard, VisualTitle, VisualMap
   },
   data () {
     return {

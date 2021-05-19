@@ -29,6 +29,7 @@ export default {
 
 <style scoped lang='scss'>
 .Visual{
+    min-width:1260px;
     width:100%;
     height:100%;
     background:url('../../assets/images/bg.jpg') no-repeat center center/cover;

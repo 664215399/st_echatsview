@@ -56,16 +56,17 @@ export default {
   src: url('../../../assets/font/DS-DIGIT.TTF');
 }
 .VisualTitle{
-    margin:0px 10px 20px 10px;
+    margin:0px 10px 0px 10px;
     width:calc(100% - 20px);
     background:rgba(101,132,226,.1);
-    padding:15px 15px 0px 15px;
+    padding:15px 15px 15px 15px;
     box-sizing: border-box;
     ul{
         @include VisualTitle-flex;
     }
     &-num{
         border:1px solid rgba(25, 186, 139, 0.17);
+        box-sizing: border-box;
         position: relative;
         li{
             height:80px;
@@ -101,6 +102,8 @@ export default {
             color:rgba(255, 255, 255, 0.7);
             font-size: 18px;
             line-height: 40px;
+            padding-top:10px;
+            box-sizing: border-box;
          }
 
      }
