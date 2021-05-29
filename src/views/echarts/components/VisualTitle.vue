@@ -48,7 +48,6 @@ export default {
   }
 }
 </script>
-
 <style scoped lang='scss'>
 @import '@/assets/scss/mixins';
 @font-face {
@@ -105,7 +104,6 @@ export default {
             padding-top:10px;
             box-sizing: border-box;
          }
-
      }
 }
 </style>

@@ -3,7 +3,9 @@
     <div class="EchartsCard-title">
       <slot name="title"></slot>
     </div>
-    <div class="EchartsCard-chart"></div>
+    <div class="EchartsCard-chart">
+        <slot name="echartView"></slot>
+    </div>
     <!-- 占位 -->
     <div class="EchartsCard-bottom"></div>
     <!-- 占位 -->
@@ -50,7 +52,7 @@ export default {
     &-chart{
         width:100%;
         height:240px;
-        background:#0068ff;
+        // background:#0068ff;
     }
     &-bottom{
       position: absolute;
