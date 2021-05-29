@@ -19,8 +19,8 @@ export const titleList = [{
 }]
 export const marketStatistics = [{
   title: '市场需求人数',
-  num: 125811
+  num: 12581
 }, {
   title: '市场供应人数',
-  num: 104212
+  num: 10421
 }]

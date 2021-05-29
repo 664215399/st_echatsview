@@ -6,8 +6,13 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Demo-one',
+    name: 'Demo-v1',
     component: () => import('../views/first/index.vue')
+  },
+  {
+    path: '/v2',
+    name: 'Demo-v2',
+    component: () => import('../views/second/index.vue')
   }
 ]
 

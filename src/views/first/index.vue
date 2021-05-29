@@ -13,25 +13,13 @@ export default {
   components: {
     VisualHeader,
     VisualBody
-  },
-  data () {
-    return {
-    }
-  },
-  created () {
-  },
-  mounted () {
-  },
-  methods: {
   }
 }
 </script>
 
 <style scoped lang='scss'>
+@import '@/assets/scss/common.scss';
 .Visual{
-    min-width:1260px;
-    width:100%;
-    height:100%;
-    background:url('../../assets/images/bg.jpg') no-repeat center center/cover;
+  background:url('../../assets/images/bg.jpg') no-repeat center center/cover;
 }
 </style>

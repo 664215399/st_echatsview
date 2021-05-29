@@ -15,17 +15,12 @@ export default {
   components: {},
   data () {
     return {
-
     }
   },
   computed: {
     options () {
       return options
     }
-  },
-  watch: {},
-  created () {
-
   },
   mounted () {
     // console.log(this.$refs[this.echartsType])

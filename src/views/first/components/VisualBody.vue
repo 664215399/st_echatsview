@@ -39,9 +39,6 @@ export default {
   created () {
     this.getData()
   },
-  mounted () {
-
-  },
   methods: {
     getData () {
       this.imitatePromise().then(res => {

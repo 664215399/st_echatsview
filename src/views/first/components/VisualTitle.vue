@@ -1,7 +1,7 @@
 <template>
   <div class="VisualTitle">
     <ul class="VisualTitle-num">
-      <li v-for="(item,index) in numList" :key="index">{{item}}</li>
+      <li v-for="(item,index) in numList" :key="index"><count-to :startVal='0' :endVal='item'></count-to></li>
     </ul>
     <ul class="VisualTitle-cont">
       <li v-for="(item,index) in titleList" :key="index">{{item}}</li>
@@ -10,8 +10,9 @@
 </template>
 
 <script>
-// import { marketStatistics } from '../datas/data'
+import countTo from 'vue-count-to'
 export default {
+  components: { countTo },
   props: {
     marketStatistics: {
       type: Array,
@@ -39,12 +40,6 @@ export default {
       titleList: [],
       numList: []
     }
-  },
-  created () {
-  },
-  mounted () {
-  },
-  methods: {
   }
 }
 </script>

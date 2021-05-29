@@ -128,18 +128,18 @@ export const mixin = {
         [{ name: '北京' }, { name: '上海', value: 100 }],
         [{ name: '北京' }, { name: '广州', value: 100 }],
         [{ name: '北京' }, { name: '西宁', value: 100 }],
-        [{ name: '北京' }, { name: '北京', value: 100 }]
+        [{ name: '北京' }, { name: '北京', value: 200 }]
       ]
       var XNData = [
         [{ name: '长春' }, { name: '北京', value: 100 }],
         [{ name: '长春' }, { name: '上海', value: 100 }],
         [{ name: '长春' }, { name: '广州', value: 100 }],
         [{ name: '长春' }, { name: '西安', value: 100 }],
-        [{ name: '长春' }, { name: '长春', value: 100 }]
+        [{ name: '长春' }, { name: '长春', value: 150 }]
       ]
       var YCData = [
         [{ name: '哈尔滨' }, { name: '潍坊', value: 100 }],
-        [{ name: '哈尔滨' }, { name: '哈尔滨', value: 100 }],
+        [{ name: '哈尔滨' }, { name: '哈尔滨', value: 140 }],
         [{ name: '哈尔滨' }, { name: '上海', value: 100 }],
         [{ name: '哈尔滨' }, { name: '西安', value: 100 }],
         [{ name: '哈尔滨' }, { name: '西宁', value: 100 }]
@@ -175,7 +175,7 @@ export const mixin = {
         // console.log(item)
         series.push(
           {
-            name: item[0] + ' Top3',
+            name: item[0] + ' Top1',
             type: 'lines',
             zlevel: 1,
             effect: {
@@ -195,7 +195,7 @@ export const mixin = {
             data: convertData(item[1])
           },
           {
-            name: item[0] + ' Top3',
+            name: item[0] + ' Top2',
             type: 'lines',
             zlevel: 2,
             symbol: ['none', 'arrow'],

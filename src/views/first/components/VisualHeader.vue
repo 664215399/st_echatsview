@@ -8,11 +8,7 @@
 export default {
   data () {
     return {}
-  },
-  created () {},
-  mounted () {},
-  methods: {},
-  computed: {}
+  }
 }
 </script>
 

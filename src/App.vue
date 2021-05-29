@@ -6,6 +6,6 @@
 
 <style lang="scss">
 #app{
-  width:100%;
+  min-width: 1400px;
 }
 </style>
