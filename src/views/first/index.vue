@@ -2,7 +2,6 @@
   <div class="Visual">
     <visual-header />
     <visual-body />
-    <template v-bind='obj[type]'></template>
   </div>
 </template>
 
@@ -17,17 +16,13 @@ export default {
   },
   data () {
     return {
-
     }
   },
   created () {
-
   },
   mounted () {
-
   },
   methods: {
-
   }
 }
 </script>

@@ -15,19 +15,9 @@
 <script>
 export default {
   data () {
-    return {
-
-    }
-  },
-  created () {
-
-  },
-  mounted () {
-
-  },
-  methods: {
-
+    return {}
   }
+
 }
 </script>
 
@@ -38,7 +28,7 @@ export default {
     width:100%;
     height:310px;
     border: 1px solid rgba(25, 186, 139, 0.17);
-    background: url('../assets/images/line.png');
+    background: url('../../assets/images/line.png');
     padding:0px 15px 40px;
     margin-bottom: 15px;
     box-sizing: border-box;
@@ -52,7 +42,6 @@ export default {
     &-chart{
         width:100%;
         height:240px;
-        // background:#0068ff;
     }
     &-bottom{
       position: absolute;

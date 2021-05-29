@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import EchartsCard from '@/components/EchartsCard'
+import EchartsCard from '@/components/first/EchartsCard'
 import VisualTitle from './VisualTitle'
 import VisualEcharts from './VisualEcharts'
 import VisualMap from './VisualMap'
