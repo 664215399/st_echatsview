@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import EchartsCardBg from '@/components/second/EchartsCardBg.vue'
+import EchartsCardBg from '@/components/v2/EchartsCardBg.vue'
 
 export default {
   components: { EchartsCardBg },

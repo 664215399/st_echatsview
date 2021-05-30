@@ -15,7 +15,7 @@
 import CountView from './CountView.vue'
 import MonitorEquipment from './MonitorEquipment.vue'
 import EchatrsView from './EchatrsView.vue'
-import EchartsCardBg from '@/components/second/EchartsCardBg.vue'
+import EchartsCardBg from '@/components/v2/EchartsCardBg.vue'
 const comEnum = [
   { view: CountView },
   { view: MonitorEquipment, height: 490 },

@@ -13,7 +13,7 @@
 <script>
 import ChinaMap from './ChinaMap.vue'
 import ChinaUser from './ChinaUser.vue'
-import EchartsCardBg from '@/components/second/EchartsCardBg.vue'
+import EchartsCardBg from '@/components/v2/EchartsCardBg.vue'
 export default {
   components: { ChinaMap, ChinaUser, EchartsCardBg },
   data () {

@@ -17,7 +17,7 @@ import ChannelView from './ChannelView.vue'
 import OrderView from './OrderView.vue'
 import BestSelling from './BestSelling.vue'
 import SellView from './SellView.vue'
-import EchartsCardBg from '@/components/second/EchartsCardBg.vue'
+import EchartsCardBg from '@/components/v2/EchartsCardBg.vue'
 const comEnum = [
   { view: OrderView, height: 150 },
   { view: ChannelView, height: 235 },
