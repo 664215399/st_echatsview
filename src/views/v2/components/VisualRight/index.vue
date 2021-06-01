@@ -33,11 +33,7 @@ export default {
     comEnum () {
       return comEnum
     }
-  },
-  watch: {},
-  created () {},
-  mounted () {},
-  methods: {}
+  }
 }
 </script>
 <style lang='scss' scoped>

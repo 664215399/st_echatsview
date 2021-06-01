@@ -2,7 +2,12 @@
   <div class="monitor">
     <div class="monitor-wrapper">
       <ul class="monitor-wrapper-type">
-        <li v-for="(value, i) in typeList" :key="i" :class="activeIndex === i ? 'active' : ''" @click="activeIndex=i">
+        <li
+          v-for="(value, i) in typeList"
+          :key="i"
+          :class="activeIndex === i ? 'active' : ''"
+          @click="activeIndex = i"
+        >
           {{ value.title }}
         </li>
       </ul>
@@ -11,9 +16,16 @@
         <li>设备地址</li>
         <li>异常代码</li>
       </ul>
-      <vue-seamless-scroll :data="monitorList.list" class="seamless">
-        <ul v-for="(item, index) in monitorList.list" :key="index" class="monitor-wrapper-list">
-          <li>{{ momentFilter(item.time)}}</li>
+      <vue-seamless-scroll
+        :data="monitorList.list"
+        class="seamless"
+      >
+        <ul
+          v-for="(item, index) in monitorList.list"
+          :key="index"
+          class="monitor-wrapper-list"
+        >
+          <li>{{ momentFilter(item.time) }}</li>
           <li>{{ item.address }}</li>
           <li>{{ item.code }}</li>
         </ul>
@@ -49,13 +61,13 @@ export default {
   }
 }
 </script>
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .monitor {
   color: #fff;
   padding: 20px 0px;
   box-sizing: border-box;
   .seamless {
-    height:350px;
+    height: 350px;
     overflow: hidden;
   }
   &-wrapper {
@@ -65,6 +77,7 @@ export default {
       line-height: 24px;
       position: relative;
       cursor: pointer;
+
       .active {
         color: #0068ff;
       }
@@ -75,15 +88,15 @@ export default {
       font-size: 16px;
       line-height: 38px;
     }
-    &-list{
+    &-list {
       font-size: 14px;
-      &:hover{
-           background-color: rgba(255, 255, 255, 0.1);
-           color:#0068ff;
-        }
-      li{
-        height:40px;
-        line-height:40px;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: #0068ff;
+      }
+      li {
+        height: 40px;
+        line-height: 40px;
       }
     }
     ul {

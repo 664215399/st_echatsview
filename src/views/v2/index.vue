@@ -16,11 +16,7 @@ export default {
   components: { VisualLeft, VisualRight, VisualCenter },
   data () {
     return {}
-  },
-  computed: {},
-  created () {},
-  mounted () {},
-  methods: {}
+  }
 }
 </script>
 
@@ -32,10 +28,9 @@ export default {
     width:100%;
     height:100%;
     background:url('../../assets/images/logov2.png') no-repeat 0 0/contain;
-    padding:100px 40px 20px 40px;
+    padding:100px 40px 0px 40px;
     box-sizing: border-box;
     display: flex;
-
   }
 }
 </style>

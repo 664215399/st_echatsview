@@ -1,12 +1,14 @@
 <template>
   <div class="map">
     <div class="map-title">设备数据统计</div>
-    <div class="map-content"></div>
+    <div class="map-content" ref="map"> </div>
   </div>
 </template>
 
 <script>
+import { mixin } from '../../datas/mixin.js' // 引入minixn
 export default {
+  mixins: [mixin],
   components: {},
   data () {
     return {}
