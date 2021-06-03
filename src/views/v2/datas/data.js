@@ -381,70 +381,455 @@ export const sell = {
   dom: 'sell'
 }
 export const quarter = {
-  title: '季度销售进度',
+  dom: 'flow',
+  title: '流量监控',
   option: {
     title: {
-      text: '50%',
-      left: 'center',
-      top: '50%',
+      text: (0.45 * 100).toFixed(0) + '{a|%}',
       textStyle: {
         fontSize: 30,
-        color: '#ffffff'
+        fontFamily: 'Microsoft Yahei',
+        fontWeight: 'normal',
+        color: '#bcb8fb',
+        rich: {
+          a: {
+            fontSize: 20
+          }
+        }
+      },
+      x: 'center',
+      y: '35%'
+    },
+    graphic: [{
+      type: 'group',
+      left: 'center',
+      top: '60%',
+      children: [{
+        type: 'text',
+        z: 100,
+        left: '10',
+        top: 'middle',
+        style: {
+          fill: '#aab2fa',
+          text: '流量统计',
+          font: '18px Microsoft YaHei'
+        }
+      }]
+    }],
+    series: [{
+      type: 'liquidFill',
+      radius: '80%',
+      center: ['50%', '50%'],
+      //  shape: 'roundRect',
+      data: [0.5, 0.3, 0.4],
+      backgroundStyle: {
+        color: {
+          type: 'linear',
+          x: 1,
+          y: 0,
+          x2: 0.5,
+          y2: 1,
+          colorStops: [{
+            offset: 1,
+            color: 'rgba(0, 104, 255, 0)'
+          }, {
+            offset: 0.5,
+            color: 'rgba(0, 104, 255, .25)'
+          }, {
+            offset: 0,
+            color: 'rgba(0, 104, 255, 1)'
+          }],
+          globalCoord: false
+        }
+      },
+      outline: {
+        borderDistance: 0,
+        itemStyle: {
+          borderWidth: 20,
+          borderColor: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [{
+              offset: 0,
+              color: 'rgba(0, 104, 255, 0)'
+            }, {
+              offset: 0.5,
+              color: 'rgba(0, 104, 255, .25)'
+            }, {
+              offset: 1,
+              color: 'rgba(0, 104, 255, 1)'
+            }],
+            globalCoord: false
+          },
+          shadowBlur: 10,
+          shadowColor: '#000'
+        }
+      },
+
+      label: {
+        normal: {
+          formatter: ''
+        }
+      }
+    }]
+  }
+}
+
+export const worldcloud = {
+  title: 'World-Cloud',
+  dom: 'worldcloud',
+  option: {
+    tooltip: {
+      show: true
+    },
+    series: [{
+      type: 'wordCloud',
+      gridSize: 1,
+      sizeRange: [12, 55],
+      rotationRange: [-45, 0, 45, 90],
+      textStyle: {
+        normal: {
+          color: function () {
+            return '#ffffff'
+          }
+        }
+      },
+      left: 'center',
+      top: 0,
+      bottom: 0,
+      data: [
+        {
+          name: 'Sam S Club',
+          value: 10000
+        }, {
+          name: 'Macys',
+          value: 6181
+        }, {
+          name: 'Amy Schumer',
+          value: 4386
+        }, {
+          name: 'Jurassic World',
+          value: 4055
+        }, {
+          name: 'Charter Communications',
+          value: 2467
+        }, {
+          name: 'Chick Fil A',
+          value: 2244
+        }, {
+          name: 'Planet Fitness',
+          value: 1898
+        }, {
+          name: 'Pitch Perfect',
+          value: 1484
+        }, {
+          name: 'Express',
+          value: 1112
+        }, {
+          name: 'Home',
+          value: 965
+        }, {
+          name: 'Johnny Depp',
+          value: 847
+        }, {
+          name: 'Lena Dunham',
+          value: 582
+        }, {
+          name: 'Lewis Hamilton',
+          value: 555
+        }, {
+          name: 'KXAN',
+          value: 550
+        }, {
+          name: 'Mary Ellen Mark',
+          value: 462
+        }, {
+          name: 'Farrah Abraham',
+          value: 366
+        }, {
+          name: 'Su Tu',
+          value: 1999
+        }, {
+          name: 'Rita Ora',
+          value: 360
+        }, {
+          name: 'Serena Williams',
+          value: 282
+        }, {
+          name: 'NCAA baseball tournament',
+          value: 273
+        }, {
+          name: 'Point',
+          value: 273
+        }, {
+          name: 'Hello Wold',
+          value: 1298
+        },
+        {
+          name: 'Hello Javascript',
+          value: 865
+        },
+        {
+          name: 'Vue.js',
+          value: 1265
+        },
+        {
+          name: 'Linux',
+          value: 2265
+        }]
+    }]
+  }
+}
+var img2 = require('@/assets/images/paopao2.png')
+var wordLength = (value) => {
+  var ret = '' // 拼接加\n返回的类目项
+  var maxLength = 4 // 每项显示文字个数
+  var valLength = value.length // X轴类目项的文字个数
+  var rowN = Math.ceil(valLength / maxLength) // 类目项需要换行的行数
+  if (rowN > 1) {
+    for (var i = 0; i < rowN; i++) {
+      var temp = '' // 每次截取的字符串
+      var start = i * maxLength // 开始截取的位置
+      var end = start + maxLength // 结束截取的位置
+      // 这里也可以加一个是否是最后一行的判断，但是不加也没有影响，那就不加吧
+      temp = value.substring(start, end) + '\n'
+      ret += temp // 凭借最终的字符串
+    }
+    return ret
+  } else {
+    return value
+  }
+}
+//
+var data = [{
+  name: '北京',
+  value: '12355'
+},
+{
+  name: '上海',
+  value: '12093'
+},
+{
+  name: '成都',
+  value: '8874'
+},
+{
+  name: '重庆',
+  value: '7427'
+},
+{
+  name: '广州',
+  value: '4308'
+},
+{
+  name: '延边',
+  value: '4308'
+}, {
+  name: '哈尔滨',
+  value: '4308'
+}
+
+]
+// 偏移量
+var offsetData = [
+  [80, 53],
+  [35, 73],
+  [30, 33],
+  [60, 43],
+  [20, 48],
+  [1, 78],
+  [100, 48],
+  [10, 28]
+]
+// symbolSize 散点气泡大小
+var symbolSizeData = [100, 100, 100, 100, 100, 100, 100, 100]
+//
+// 循环定义series的data值
+var datas = []
+for (var i = 0; i < data.length; i++) {
+  const item = data[i]
+  // var itemToStyle = datalist[i];
+
+  datas.push({
+    name: wordLength(item.name) + '\n' + item.value + '人',
+    value: offsetData[i],
+    symbolSize: symbolSizeData[i],
+    label: {
+      normal: {
+        textStyle: {
+          fontSize: 14
+        }
       }
     },
-    series: [
-      {
-        name: '销售进度',
-        type: 'pie',
-        radius: ['130%', '150%'],
-        // 移动下位置  套住50%文字
-        center: ['48%', '80%'],
-        // 是否启用防止标签重叠策略
-        // avoidLabelOverlap: false,
-        labelLine: {
-          normal: {
-            show: false
-          }
+    itemStyle: {
+      normal: {
+        color: new echarts.graphic.RadialGradient(0.3, 0.5, 0.7, [{
+          offset: 0,
+          color: 'rgba(31,102,162,0)'
         },
-        // 饼形图的起始角度为 180， 注意不是旋转角度
-        startAngle: 180,
-        // 鼠标经过不需要放大偏移图形
-        hoverOffset: 0,
-        data: [
-          {
-            value: 100,
-            itemStyle: {
-              // 颜色渐变#00c9e0->#005fc1
-              color: new echarts.graphic.LinearGradient(
-                // (x1,y2) 点到点 (x2,y2) 之间进行渐变
-                0,
-                0,
-                0,
-                1,
-                [
-                  { offset: 0, color: '#00c9e0' }, // 0 起始颜色
-                  { offset: 1, color: '#005fc1' } // 1 结束颜色
-                ]
-              )
-            }
-          },
-          {
-            value: 100,
-            itemStyle: {
-              color: '#12274d'
-            }
-          },
-          {
-            value: 200,
-            itemStyle: {
-              color: 'transparent'
-            }
+        {
+          offset: 1,
+          color: 'rgba(31,102,192,0.6)'
+        }
+        ]),
+        opacity: 0.8,
+        shadowColor: '#2e78eca8',
+        shadowBlur: 10,
+        shadowOffsetX: 1,
+        shadowOffsetY: 1
+      }
+
+    }
+  })
+}
+export const paopao = {
+  title: '分布气泡图',
+  dom: 'paopao',
+  option: {
+    grid: {
+      show: false,
+      top: 10,
+      bottom: 10
+    },
+    xAxis: [{
+      gridIndex: 0,
+      type: 'value',
+      show: false,
+      min: 0,
+      max: 100,
+      nameLocation: 'middle',
+      nameGap: 5
+    }],
+    yAxis: [{
+      gridIndex: 0,
+      min: 0,
+      show: false,
+      max: 100,
+      nameLocation: 'middle',
+      nameGap: 30
+    }],
+
+    series: [{
+      type: 'scatter',
+      symbol: 'circle',
+      symbolSize: 120,
+      label: {
+        normal: {
+          show: true,
+          formatter: '{b}',
+          color: '#fff',
+          textStyle: {
+            fontSize: '20'
           }
-        ]
+        }
+      },
+      animationDurationUpdate: 1000,
+      animationEasingUpdate: 1000,
+      animationDelay: function (idx) {
+        // 越往后的数据延迟越大
+        return idx * 100
+      },
+      itemStyle: {
+        normal: {
+          color: '#00acea'
+        }
+      },
+      data: datas
+    }],
+    graphic: [
+      {
+        type: 'image',
+        id: 'logo',
+        left: '45%',
+        bottom: '30%',
+        z: -10,
+        bounding: 'raw',
+        origin: [675, 5],
+        //  position: [100, 0], // 平移，默认值为 [0, 0]。
+        style: {
+          image: img2,
+          width: 120,
+          height: 120,
+          opacity: 0.4
+        }
+      },
+      {
+        type: 'image',
+        id: 'logo1',
+        right: '14%',
+        bottom: '0',
+        z: -10,
+        bounding: 'raw',
+        origin: [275, 5],
+        style: {
+          image: img2,
+          width: 80,
+          height: 80,
+          opacity: 0.4
+        }
+      },
+      {
+        type: 'image',
+        id: 'logo2',
+        left: '10%',
+        bottom: '2%',
+        z: -10,
+        bounding: 'raw',
+        origin: [875, 15],
+        style: {
+          image: img2,
+          width: 60,
+          height: 60,
+          opacity: 0.4
+        }
+      }, {
+        type: 'image',
+        id: 'logo3',
+        left: '36%',
+        bottom: 0,
+        z: -10,
+        bounding: 'raw',
+        origin: [975, 5],
+        style: {
+          image: img2,
+          width: 40,
+          height: 40,
+          opacity: 0.4
+        }
+      },
+      {
+        type: 'image',
+        id: 'logo4',
+        left: '32%',
+        bottom: '10%',
+        z: -10,
+        bounding: 'raw',
+        origin: [76, 76],
+        style: {
+          image: img2,
+          width: 50,
+          height: 50,
+          opacity: 0.4
+        }
+      },
+      {
+        type: 'image',
+        id: 'logo5',
+        left: '40%',
+        bottom: '35%',
+        z: -10,
+        bounding: 'raw',
+        origin: [76, 76],
+        style: {
+          image: img2,
+          width: 90,
+          height: 90,
+          opacity: 0.4
+        }
       }
     ]
-  },
-  position: 'bottom',
-  dom: 'quarter',
-  tooltip: [{ title: '销售额(万)', count: 1993 }, { title: '同比增长', count: 150 }]
+  }
 }

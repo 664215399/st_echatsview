@@ -52,11 +52,10 @@ export default {
   display: flex;
   height: 250px;
   @include v2-wrapper;
+   justify-content: space-between;
   > div {
-    flex: 1;
-    &:nth-of-type(1) {
-      margin-right: 20px;
-    }
+    flex: .48;
+
   }
 }
 </style>

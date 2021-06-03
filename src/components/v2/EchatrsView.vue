@@ -14,7 +14,8 @@
 
 <script>
 import echarts from 'echarts'
-
+import 'echarts-wordcloud'
+import 'echarts-liquidfill'
 import EchartsCardTooltip from '@/components/v2/EchartsCardTooltip.vue'
 export default {
   components: { EchartsCardTooltip },
@@ -23,6 +24,7 @@ export default {
   },
   computed: {
     data ({ $attrs, $route, $store, $listens, $ref }) {
+      // console.log($attrs)
       return $attrs
     }
   },
@@ -58,6 +60,9 @@ export default {
       height:50%;
       background:none;
     }
+        .EchartsView-view-left{
+          flex:4
+        }
   }
   &-view {
     width: 100%;

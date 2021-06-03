@@ -5,7 +5,7 @@
       <div v-else :style="{height:item.height+'px'}"></div>
       <div class="right-wrapper-content">
         <template>
-          <component v-bind:is="item.view"></component>
+          <component v-bind:is="item.view" v-bind="item.data"></component>
         </template>
       </div>
     </div>
@@ -13,16 +13,18 @@
 </template>
 
 <script>
-import ChannelView from './ChannelView.vue'
+// import WordCloud from './WordCloud.vue'
 import OrderView from './OrderView.vue'
-import BestSelling from './BestSelling.vue'
+// import BestSelling from './BestSelling.vue'
 import SellView from './SellView.vue'
 import EchartsCardBg from '@/components/v2/EchartsCardBg.vue'
+import EchatrsView from '@/components/v2/EchatrsView.vue'
+import { worldcloud, paopao } from '../../datas/data'
 const comEnum = [
   { view: OrderView, height: 150 },
-  { view: ChannelView, height: 235 },
+  { view: EchatrsView, height: 235, data: worldcloud },
   { view: SellView, height: 250 },
-  { view: BestSelling, height: 285 }
+  { view: EchatrsView, height: 285, data: paopao }
 ]
 export default {
   components: { EchartsCardBg },
@@ -33,6 +35,9 @@ export default {
     comEnum () {
       return comEnum
     }
+  },
+  mounted () {
+    // console.log(worldcloud)
   }
 }
 </script>
