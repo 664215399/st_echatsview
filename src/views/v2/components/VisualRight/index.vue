@@ -1,8 +1,8 @@
 <template>
   <div class="right">
     <div v-for="(item, index) in comEnum" :key="index" class="right-wrapper">
-      <echarts-card-bg :height="item.height" v-if="index!==2"> </echarts-card-bg>
-      <div v-else :style="{height:item.height+'px'}"></div>
+      <echarts-card-bg :height="item.height" > </echarts-card-bg>
+      <!-- <div v-else :style="{height:item.height+'px'}"></div> -->
       <div class="right-wrapper-content">
         <template>
           <component v-bind:is="item.view" v-bind="item.data"></component>
@@ -13,9 +13,7 @@
 </template>
 
 <script>
-// import WordCloud from './WordCloud.vue'
 import OrderView from './OrderView.vue'
-// import BestSelling from './BestSelling.vue'
 import SellView from './SellView.vue'
 import EchartsCardBg from '@/components/v2/EchartsCardBg.vue'
 import EchatrsView from '@/components/v2/EchatrsView.vue'
@@ -35,9 +33,6 @@ export default {
     comEnum () {
       return comEnum
     }
-  },
-  mounted () {
-    // console.log(worldcloud)
   }
 }
 </script>

@@ -3,7 +3,7 @@
     <div v-for="(item, index) in sellList"
          :key="index"
          class="SellView-wrapper">
-      <echarts-card-bg :height="item.height"> </echarts-card-bg>
+      <!-- <echarts-card-bg :height="item.height"> </echarts-card-bg> -->
       <div class="SellView-wrapper-content">
         <template>
           <component v-bind:is="item.view"
@@ -25,24 +25,12 @@ const sellList = [
 export default {
   components: { EchartsCardBg, EchatrsView },
   data () {
-    return {
-
-    }
+    return {}
   },
   computed: {
     sellList () {
       return sellList
     }
-  },
-  watch: {},
-  created () {
-
-  },
-  mounted () {
-
-  },
-  methods: {
-
   }
 }
 </script>
@@ -54,7 +42,7 @@ export default {
   @include v2-wrapper;
    justify-content: space-between;
   > div {
-    flex: .48;
+    flex: .5
 
   }
 }

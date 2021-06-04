@@ -115,7 +115,7 @@ export const monitor = [{
 }
 ]
 export const chinaSpecies = {
-  title: '点位分布图',
+  title: '分布饼状图',
   option: {
     tooltip: {
       trigger: 'item',
@@ -186,7 +186,7 @@ var item = {
   }
 }
 export const ChinaUser = {
-  title: '点位分布图',
+  title: '分布柱状图',
   option: {
     color: new echarts.graphic.LinearGradient(
       // (x1,y2) 点到点 (x2,y2) 之间进行渐变
@@ -303,7 +303,7 @@ export const ChinaUser = {
 }
 
 export const sell = {
-  title: '渠道分布',
+  title: '销售渠道',
   option: {
     tooltip: {
       show: true,
@@ -315,8 +315,8 @@ export const sell = {
         { name: '机场', max: 100 },
         { name: '商场', max: 100 },
         { name: '火车站', max: 100 },
-        { name: '汽车站', max: 100 },
-        { name: '地铁', max: 100 }
+        { name: '地铁站', max: 100 },
+        { name: '电商', max: 100 }
       ],
       // 修改雷达图的大小
       radius: '65%',
@@ -347,7 +347,7 @@ export const sell = {
     },
     series: [
       {
-        name: '北京',
+        name: '销售渠道占比',
         type: 'radar',
         // 填充区域的线条颜色
         lineStyle: {
