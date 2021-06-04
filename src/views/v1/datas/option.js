@@ -280,7 +280,7 @@ export const count = {
   },
   legend: {
     top: '0%',
-    data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎'],
+    data: ['市场供应', '市场需求', '待定', '待定', '待定'],
     textStyle: {
       color: 'rgba(255,255,255,.5)',
       fontSize: '12'
@@ -371,7 +371,7 @@ export const count = {
   ],
   series: [
     {
-      name: '邮件营销',
+      name: '市场供应',
       type: 'line',
       smooth: true,
       // 单独修改当前线条的样式
@@ -446,7 +446,7 @@ export const count = {
       ]
     },
     {
-      name: '联盟广告',
+      name: '市场需求',
       type: 'line',
       smooth: true,
       lineStyle: {
