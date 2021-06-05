@@ -1,13 +1,5 @@
 const CompressionPlugin = require('compression-webpack-plugin')
-const path = require('path')
 module.exports = {
-  build: {
-    index: path.resolve(__dirname, 'dist/index.html'),
-    assetsRoot: path.resolve(__dirname, 'dist'),
-    assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
-    productionSourceMap: true
-  },
   configureWebpack: () => {
     if (process.env.NODE_ENV === 'production') {
       return {
