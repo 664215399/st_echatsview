@@ -583,7 +583,7 @@ export const worldcloud = {
     }]
   }
 }
-var img2 = require('@/assets/images/paopao2.png')
+var img2 = require('@/assets/images/v2/paopao2.png')
 var wordLength = (value) => {
   var ret = '' // 拼接加\n返回的类目项
   var maxLength = 4 // 每项显示文字个数

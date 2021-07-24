@@ -1,16 +1,29 @@
 @keyframes rotate-clockwise {
-    from {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  @keyframes rotate-anticlockwise {
-    from {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-      transform: translate(-50%, -50%) rotate(-360deg);
-    }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+@keyframes rotate-anticlockwise {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+@keyframes rotate-v3 {
+  from {
+    transform:  rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+

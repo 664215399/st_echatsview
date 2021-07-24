@@ -24,13 +24,13 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-@import '@/assets/scss/common.scss';
+@import '@/assets/scss/mixins.scss';
 .Visual {
-  background: url('../../assets/images/bgv2.jpg') no-repeat center center/cover;
+  @include bg-image('../../assets/images/v2/bgv2.jpg');
   &-header {
     line-height: 80px;
     height: 80px;
-    background: url('../../assets/images/logov2.png') no-repeat center center / cover;
+    @include bg-image('../../assets/images/v2/logov2.png');
     h1{
       text-align: center;
       font-size: 36px;

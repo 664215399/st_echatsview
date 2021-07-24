@@ -18,7 +18,7 @@ export default {
     width: 100%;
     border: 20px solid transparent;
     border-width: 63px 47px 25px 165px;
-    border-image-source: url('../../assets/images/borderv2.png');
+    border-image-source: url('../../assets/images/v2/borderv2.png');
     border-image-slice: 63 47 25 165;
     box-sizing: border-box;
     position: relative;

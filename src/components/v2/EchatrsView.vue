@@ -73,7 +73,7 @@ export default {
     }
     &-right {
       flex: 2;
-      background: url('../../assets/images/rectv2.png') no-repeat center center/cover;
+      background: url('../../assets/images/v2/rectv2.png') no-repeat center center/cover;
       padding: 40px 30px;
       box-sizing: border-box;
     }

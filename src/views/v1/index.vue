@@ -18,8 +18,8 @@ export default {
 </script>
 
 <style scoped lang='scss'>
-@import '@/assets/scss/common.scss';
+@import '@/assets/scss/mixins.scss';
 .Visual{
-  background:url('../../assets/images/bg.jpg') no-repeat center center/cover;
+  @include bg-image('../../assets/images/v1/bg.jpg');
 }
 </style>

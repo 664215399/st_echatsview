@@ -17,7 +17,7 @@ export default {
   position: relative;
   width: 100%;
   height: 100px;
-  background: url('../../../assets/images/head_bg.png') no-repeat top center / 100% 100%;
+  background: url('../../../assets/images/v1/head_bg.png') no-repeat top center / 100% 100%;
   &-title {
     text-align: center;
     color: #fff;

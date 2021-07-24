@@ -50,8 +50,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   li {
     text-align: center;
     flex: 1;
   }
 }
+
+@mixin bg-image($url) {
+  width: 100%;
+  background: url($url) no-repeat center center/cover;
+}
+
+@mixin flex-mixins($j,$a,$d:row) {
+  display: flex;
+  justify-content: $j;
+  align-items: $a;
+  flex-direction: $d;
+}
+
