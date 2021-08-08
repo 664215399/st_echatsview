@@ -19,23 +19,7 @@
 </template>
 
 <script>
-export default {
-  components: {},
-  data () {
-    return {
 
-    }
-  },
-  mounted () {
-
-  },
-  methods: {
-
-  },
-  destroyed () {
-
-  }
-}
 </script>
 <style lang="scss" scoped>
 @import '@/assets/scss/mixins.scss';
