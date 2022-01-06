@@ -1,7 +1,7 @@
 # EchatsView
 
 ## View
-view：https://664215399.github.io/V2_echatsView/
+view：https://664215399.github.io/v2_echatsview/
 
 ## Project setup
 ```
