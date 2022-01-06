@@ -1,5 +1,8 @@
 # EchatsView
 
+## View
+view：https://664215399.github.io/V2_echatsView/
+
 ## Project setup
 ```
 npm install
